@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loginapp/homePage/homepage.dart';
+import 'package:loginapp/base/bottom_nav_bar.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -11,15 +11,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Homepage(),
       theme:ThemeData(
-        colorScheme:ColorScheme.fromSeed(
-            seedColor: Colors.red,
-            brightness: Brightness.dark
-          ),
-        useMaterial3: true
-        )
 
+      ),
+      home:BottomNavBar()
     );
   }
 }
