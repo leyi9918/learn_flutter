@@ -29,10 +29,13 @@ class HomeScreen extends StatelessWidget {
                       ]
                     ),
                     Container(
-                        color:Colors.blue,
+                        
                         width: 50,
                         height: 50,
-                        child: Text("the picture")),
+                        decoration: BoxDecoration(
+                            image:DecorationImage(image:AssetImage("assets/images/logo.png"))
+                          ),
+                        ),
                   ],
                 ),
                 Row(
