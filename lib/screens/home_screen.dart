@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:loginapp/res/media.dart';
 import 'package:loginapp/res/styles/app_styles.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,8 +10,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppStyles.bgColor,
       body: ListView(
         children: [
+          SizedBox(height: 40),
           Container(
             padding: const EdgeInsets.all(20),
             child: Column(
@@ -23,27 +26,34 @@ class HomeScreen extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Good Morning",style: AppStyles.headLineStyle1),
+                        Text("Good Morning",style: AppStyles.headLineStyle3),
                         SizedBox(height:5),
-                        Text("Book Tickets",style: AppStyles.headLineStyle3),
+                        Text("Book Tickets",style: AppStyles.headLineStyle1),
                       ]
                     ),
                     Container(
-                        
                         width: 50,
                         height: 50,
                         decoration: BoxDecoration(
-                            image:DecorationImage(image:AssetImage("assets/images/logo.png"))
+                            borderRadius: BorderRadius.circular(10),
+                            image:DecorationImage(image:AssetImage(AppMeida.logo))
                           ),
                         ),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("serachIcon"),
-                    Text("empty space")
-                  ],
+                const SizedBox(height: 25),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white,
+                    ),                  
+                  child: Row(
+                    children: [
+                      Icon(FluentSystemIcons.ic_fluent_search_regular, color: Color(0xFFBFC205)),
+                      Text("serach"),
+                    ],
+                  ),
                 )
               ],
             ),
