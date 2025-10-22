@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:loginapp/homePage/homepage.dart';
+import 'package:loginapp/pages/homepage.dart';
+import 'package:loginapp/route/Routes.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -11,11 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Homepage(),
+      onGenerateRoute: Routes.generateRoute,
+      initialRoute: RoutePath.home,
       theme:ThemeData(
         colorScheme:ColorScheme.fromSeed(
             seedColor: Colors.red,
-            brightness: Brightness.dark
+            brightness: Brightness.light
           ),
         useMaterial3: true
         )
